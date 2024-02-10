@@ -12,7 +12,7 @@ app.use(cors());
 
 
 app.get("/", (req, res)=>{
-    res.send("Welcome to TodoX")
+    res.send("Welcome to Easaly")
 })
 
 
