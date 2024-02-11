@@ -6,10 +6,11 @@ const mongoose = require("mongoose");
 const port = process.env.PORT
 const mongoConnectUri = process.env.MONGO_CONNECT_URI
 const app = express()
+const userRoute = require("./router/user");
 
 app.use(express.json());
 app.use(cors());
-
+app.use("/user", userRoute)
 
 app.get("/", (req, res)=>{
     res.send("Welcome to Easaly")
